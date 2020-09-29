@@ -1,0 +1,35 @@
+.box{
+  width: 100px;
+  height: 120px;
+  background-color: purple;
+  transition-property: all;
+  transition-duration: .5s;
+  float: left;
+  transform:scale(1, 1);
+
+  animation: opacitytozero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.box:hover {
+  transform:scale(0.4, 0.4);
+  animation-play-state: running; 
+}
+
+@keyframes opacitytozero {
+
+  0% {
+    opacity: 1; 
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} 
+
